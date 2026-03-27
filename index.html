@@ -21,6 +21,11 @@
 					<p>소프트웨어 엔지니어
 					<br />사용자 인증 아키텍처
 					<br />B2B 서비스 운영</p>
+					<br />
+					<div id="app" style="display: none;">
+						<h1 id="welcome-msg"></h1>
+						<button onclick="handleLogout()">로그아웃</button>
+					</div>
 				</header>
 				<nav id="nav">
 					<ul>
@@ -506,6 +511,8 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="https://dm-son.duckdns.org/auth/js/keycloak.js"></script>
+			<script src="assets/js/keycloak/init.js"></script>
 
 	</body>
 </html>
