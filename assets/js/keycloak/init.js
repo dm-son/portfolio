@@ -8,7 +8,8 @@ const keycloak = new Keycloak({
 // 초기화 설정
 keycloak.init({ 
     onLoad: 'login-required', // 접속하자마자 로그인 페이지로 이동
-    checkLoginIframe: false 
+    checkLoginIframe: false,
+    redirectUri: 'https://dm-son.github.io/portfolio/'
 }).then(authenticated => {
     if (authenticated) {
         console.log("인증 성공");
@@ -31,5 +32,5 @@ keycloak.init({
 // 로그아웃 함수
 function handleLogout() {
     // 로그아웃 후 다시 돌아올 주소 설정
-    keycloak.logout({ redirectUri: 'https://dm-son.github.io' });
+    keycloak.logout({ redirectUri: 'https://dm-son.github.io/portfolio/' });
 }
